@@ -4,9 +4,9 @@
  */
 
 import { ref } from 'vue';
+import { fetchPublished, subscribeToContentUpdates } from '../helpers/data-fetching';
 import { useAsyncData, useNuxtApp, useRuntimeConfig } from '#app';
 import type { AsyncDataOptions } from '#app';
-import { fetchPublished, subscribeToContentUpdates } from '../helpers/data-fetching';
 
 interface UseDatoCmsParams {
   query: any

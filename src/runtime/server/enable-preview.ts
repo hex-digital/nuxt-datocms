@@ -1,6 +1,6 @@
 import type { H3Event } from 'h3';
-import { PREVIEW_MODE_COOKIE_NAME } from '../helpers/preview';
 import { createError, getQuery, sendError, sendRedirect, setCookie } from 'h3';
+import { PREVIEW_MODE_COOKIE_NAME } from '../helpers/preview';
 import { useRuntimeConfig } from '#imports';
 
 export async function enablePreview(event: H3Event) {

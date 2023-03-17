@@ -1,4 +1,4 @@
 {
-  "private": true,
-  "name": "nuxt-datocms-playground"
+  "name": "nuxt-datocms-playground",
+  "private": true
 }

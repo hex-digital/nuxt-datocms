@@ -1,12 +1,12 @@
 import {
-  defineNuxtModule,
-  addPlugin,
-  createResolver,
+  addComponent,
   addImports,
   addImportsDir,
-  addComponent,
-  useLogger,
+  addPlugin,
   addServerHandler,
+  createResolver,
+  defineNuxtModule,
+  useLogger,
 } from '@nuxt/kit';
 import { defu } from 'defu';
 
@@ -18,14 +18,14 @@ export interface ModuleOptions {
   privateDraftEnabledToken?: string
   privatePreviewModePassword?: string
   privatePreviewModeEncryptionSecret?: string
-  disablePreviewPassword?: boolean,
-  registerApiHandlers?: boolean,
+  disablePreviewPassword?: boolean
+  registerApiHandlers?: boolean
 }
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
     name: '@hexdigital/nuxt-datocms',
-    configKey: 'datocms'
+    configKey: 'datocms',
   },
   // Default configuration options of the Nuxt module
   defaults: {
@@ -34,7 +34,7 @@ export default defineNuxtModule<ModuleOptions>({
     disablePreviewPassword: false,
     registerApiHandlers: true,
   },
-  setup (options, nuxt) {
+  setup(options, nuxt) {
     const logger = useLogger('nuxt-datocms');
 
     if (!options.publicReadOnlyToken) {
@@ -104,5 +104,5 @@ export default defineNuxtModule<ModuleOptions>({
         handler: resolve('./runtime/server/api/preview.ts'),
       });
     }
-  }
-})
+  },
+});

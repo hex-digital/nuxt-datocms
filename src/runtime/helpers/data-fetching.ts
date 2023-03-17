@@ -1,10 +1,12 @@
 import type { RuntimeConfig } from '@nuxt/schema';
 
 import { useQuerySubscription } from 'vue-datocms';
-import { PREVIEW_MODE_COOKIE_NAME, isEnabledPreview } from './preview';
-import type { Preview } from './preview';
 import { ref } from 'vue';
 import type { Ref } from 'vue';
+// eslint-disable-next-line unused-imports/no-unused-imports
+import type { ConnectionStatus } from 'datocms-listen';
+import { PREVIEW_MODE_COOKIE_NAME, isEnabledPreview } from './preview';
+import type { Preview } from './preview';
 import { useCookie } from '#app';
 
 export async function fetchPublished({

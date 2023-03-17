@@ -43,7 +43,7 @@ export default defineNuxtConfig({
   modules: [
     '@hexdigital/nuxt-datocms'
   ]
-})
+});
 ```
 
 3. Configure the options for this module. If you want to enable viewing draft content, set the optional parameters too:
@@ -63,15 +63,15 @@ export default defineNuxtConfig({
 
     // Optional - if you'd like to allow user's to preview new content without needing to enter a password (beta documentation that's open for feedback, for example).
     disablePreviewPassword: true, // defaults to false
-    
+
     // Optional - if you'd like to disable use the default server API routes for draft preview
     registerApiHandlers: false, // defaults to true
-    
+
     // Optional - do not include environment if you're not using environments, and usually no need to include endpoint either
     // environment: 'production', // defaults to undefined
     // endpoint: 'https://graphql.datocms.com',
   },
-})
+});
 ```
 
 API tokens can be generated inside of your project, in Settings > API tokens. See image below
