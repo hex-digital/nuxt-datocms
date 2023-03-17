@@ -6,7 +6,6 @@ import type { Preview } from './preview';
 import { ref } from 'vue';
 import type { Ref } from 'vue';
 import { useCookie } from '#app';
-import type { ConnectionStatus } from 'datocms-listen';
 
 export async function fetchPublished({
   endpoint,
