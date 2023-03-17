@@ -33,7 +33,6 @@ export default defineNuxtModule<ModuleOptions>({
     publicReadOnlyToken: null,
     disablePreviewPassword: false,
     registerApiHandlers: true,
-    privatePreviewModePassword: 'showme',
   },
   setup (options, nuxt) {
     const logger = useLogger('nuxt-datocms');
