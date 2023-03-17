@@ -64,7 +64,7 @@ export default defineNuxtConfig({
     // Optional - if you'd like to allow user's to preview new content without needing to enter a password (beta documentation that's open for feedback, for example).
     disablePreviewPassword: true, // defaults to false
 
-    // Optional - if you'd like to disable use the default server API routes for draft preview
+    // Optional - if you'd like to disable using the default server API routes for draft preview (so you can create your own, for example)
     registerApiHandlers: false, // defaults to true
 
     // Optional - do not include environment if you're not using environments, and usually no need to include endpoint either
