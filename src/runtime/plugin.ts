@@ -9,7 +9,7 @@ export const DATO_STATE_KEY = 'datocms';
 
 let logger: LoggerObject = disabledLogger;
 
-export default defineNuxtPlugin(async (NuxtApp) => {
+export default defineNuxtPlugin(async (_NuxtApp) => {
   console.log('Injecting plugin by @hexdigital/nuxt-datocms!');
   const runtimeConfig = useRuntimeConfig();
 

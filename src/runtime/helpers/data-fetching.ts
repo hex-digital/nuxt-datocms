@@ -1,16 +1,23 @@
-/**
- * These functions help with
- */
-
 import type { RuntimeConfig } from '@nuxt/schema';
 
 import { useQuerySubscription } from 'vue-datocms';
 import { PREVIEW_MODE_COOKIE_NAME, isEnabledPreview } from './preview';
 import type { Preview } from './preview';
-import type { LoggerObject } from './logger';
 import { ref } from 'vue';
 import type { Ref } from 'vue';
 import { useCookie } from '#app';
+import type { ConnectionStatus } from 'datocms-listen';
+
+interface QuerySubscription {
+  data: Ref;
+  status: Ref<ConnectionStatus>;
+  error: Ref<{
+    code: string;
+    message: string;
+    fatal: boolean;
+    response?: any;
+  } | null>;
+}
 
 export async function fetchPublished({
   endpoint,
@@ -19,7 +26,6 @@ export async function fetchPublished({
   query,
   variables,
   environment,
-  logger,
 }: {
   endpoint: string
   token: string
@@ -27,7 +33,6 @@ export async function fetchPublished({
   query: any
   variables: Record<string, any>
   environment?: string
-  logger?: LoggerObject
 }) {
   const data: Ref = ref(null);
 
@@ -68,7 +73,7 @@ export async function fetchPublished({
   return { data };
 }
 
-export async function subscribeToContentUpdates({
+export function subscribeToContentUpdates({
   query,
   variables = {},
   token,
@@ -82,7 +87,7 @@ export async function subscribeToContentUpdates({
   initialData: any
   environment?: string
   includeDrafts?: boolean
-}) {
+}): QuerySubscription {
   return useQuerySubscription({
     query,
     variables,
@@ -111,7 +116,7 @@ export async function previewAndToken(runtimeConfig: RuntimeConfig) {
   // so we can't give them preview mode
   if (!token) {
     preview = false;
-    token = await bundleSafeToken(runtimeConfig);
+    token = await publicReadOnlyToken(runtimeConfig);
   }
 
   return {
@@ -137,7 +142,7 @@ function isPreviewEnabled(_runtimeConfig: RuntimeConfig): boolean {
  */
 export async function draftEnabledToken(runtimeConfig: RuntimeConfig) {
   if (process.server) {
-    return runtimeConfig.datocms.draftEnabledToken;
+    return runtimeConfig.datocms.privateDraftEnabledToken;
   }
 
   if (process.client) {
@@ -154,6 +159,6 @@ export async function draftEnabledToken(runtimeConfig: RuntimeConfig) {
 /**
  * Get the read-only, non-draft token for regular use of the CMS.
  */
-export async function bundleSafeToken(runtimeConfig: RuntimeConfig): Promise<string> {
-  return runtimeConfig.public.datocms.bundleSafeToken;
+export async function publicReadOnlyToken(runtimeConfig: RuntimeConfig): Promise<string> {
+  return runtimeConfig.public.datocms.publicReadOnlyToken;
 }
