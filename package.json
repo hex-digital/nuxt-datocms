@@ -3,8 +3,16 @@
   "type": "module",
   "version": "1.0.0",
   "description": "DatoCMS Nuxt module",
+  "author": "Jamie Warburton @Jamiewarb",
   "license": "MIT",
+  "homepage": "https://github.com/hex-digital/nuxt-datocms",
   "repository": "@hexdigital/nuxt-datocms",
+  "bugs": "https://github.com/hex-digital/nuxt-datocms/issues",
+  "keywords": [
+    "nuxt",
+    "datocms",
+    "module"
+  ],
   "exports": {
     ".": {
       "types": "./dist/types.d.ts",
