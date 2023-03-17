@@ -15,8 +15,9 @@ Nuxt 3 module for [DatoCMS](https://datocms.com/), a wonderful Headless CMS.
 
 - ⛰ Integration with Nuxt's `useAsyncData()` for de-duplicated requests
 - 🌲 Pre-configured preview mode for draft content, and real-time updates
-- 🧭 Easily generate a sitemap for your DatoCMS-powered site (coming soon)
 - 👌 Auto-imports composables + components from [`vue-datocms`](https://github.com/datocms/vue-datocms)
+- 🧭 Easily generate a sitemap for your DatoCMS-powered site (coming soon)
+- ⚙️ Compatible with any data-fetching library (Villus, Apollo, axios, etc) (coming soon)
 
 ## Usage
 
@@ -60,8 +61,14 @@ export default defineNuxtConfig({
     privatePreviewModePassword: 'showmethenewstuff', // A password required to enable draft previews
     privatePreviewModeEncryptionSecret: '14e6f2b5ebefb46270ed411e916c452a377c70f5d548cb6b672ec40d7e1ab8ef', // A hash that is stored on the User's device once draft is enabled, to prove it's legitimate. Change this to turn-off all currently active draft previews
 
+    // Optional - if you'd like to allow user's to preview new content without needing to enter a password (beta documentation that's open for feedback, for example).
+    disablePreviewPassword: true, // defaults to false
+    
+    // Optional - if you'd like to disable use the default server API routes for draft preview
+    registerApiHandlers: false, // defaults to true
+    
     // Optional - do not include environment if you're not using environments, and usually no need to include endpoint either
-    // environment: 'production',
+    // environment: 'production', // defaults to undefined
     // endpoint: 'https://graphql.datocms.com',
   },
 })

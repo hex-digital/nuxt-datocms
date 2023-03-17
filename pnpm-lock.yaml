@@ -10,9 +10,11 @@ specifiers:
   eslint: ^8.36.0
   nuxt: ^3.3.1
   vitest: ^0.29.3
+  vue-datocms: ^4.0.2
 
 dependencies:
   '@nuxt/kit': 3.3.1
+  vue-datocms: 4.0.2
 
 devDependencies:
   '@nuxt/eslint-config': 0.1.1_eslint@8.36.0
@@ -2156,6 +2158,10 @@ packages:
     resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==}
     dev: true
 
+  /array-flatten/3.0.0:
+    resolution: {integrity: sha512-zPMVc3ZYlGLNk4mpK1NzP2wg0ml9t7fUgDsayR5Y5rSzxQilzR9FGu/EH2jQOcKSAeAfWeylyW8juy3OkWRvNA==}
+    dev: false
+
   /array-union/2.1.0:
     resolution: {integrity: sha512-HGyxoOTYUyCM6stUe6EJgnd4EoewAI7zMdfqO+kGjnlZmBDz/cR5pf8r/cR4Wq60sL/p0IkcjUEEPwS3GFrIyw==}
     engines: {node: '>=8'}
@@ -2712,6 +2718,22 @@ packages:
     resolution: {integrity: sha512-0R9ikRb668HB7QDxT1vkpuUBtqc53YyAwMwGeUFKRojY/NWKvdZ+9UYtRfGmhqNbRkTSVpMbmyhXipFFv2cb/A==}
     engines: {node: '>= 12'}
     dev: true
+
+  /datocms-listen/0.1.14:
+    resolution: {integrity: sha512-Ijd5fzQ1Y1EUiSwduvaPRN7a6Edh//c500/2MjDhgaKd+N+zGEy7rpJ/SVXX0TdYDhX0ssoC4FDms6sbR7k+eA==}
+    dev: false
+
+  /datocms-structured-text-generic-html-renderer/2.0.4:
+    resolution: {integrity: sha512-Rv5Y1eC9NZXNSz3FHvHGFvGnKEEbvG1kQWlylpCSoeDBZPBwSWAFD/ixIAOfa8Yk1EVpmoQd3KQd725WKYJwRQ==}
+    dependencies:
+      datocms-structured-text-utils: 2.0.4
+    dev: false
+
+  /datocms-structured-text-utils/2.0.4:
+    resolution: {integrity: sha512-JxDdJaipm3FePOli9s82MRrBDnlPP9GYhqajQJaYEu4V1jwUSZzbVkYVKMfVHUfP0Gh0VSCxPHjAGGAN1nWMJg==}
+    dependencies:
+      array-flatten: 3.0.0
+    dev: false
 
   /debug/2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
@@ -3646,6 +3668,10 @@ packages:
     resolution: {integrity: sha512-zyzVyMjpGBX2+6cDVZeFPCdtOtdsxOeseRhB9tkQ6xXmGUNrcnBzdEKPy3VPNYz+4gy1oukVOXcrJCunSyc6QQ==}
     engines: {node: '>=14.18.0'}
     dev: true
+
+  /hyphenate-style-name/1.0.4:
+    resolution: {integrity: sha512-ygGZLjmXfPHj+ZWh6LwbC37l43MhfztxetbFCoYTM2VjkIUpeHgSNn7QIyVFj7YQ1Wl9Cbw5sholVJPzWvC2MQ==}
+    dev: false
 
   /iconv-lite/0.4.24:
     resolution: {integrity: sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==}
@@ -6271,6 +6297,35 @@ packages:
     dependencies:
       ufo: 1.1.1
     dev: true
+
+  /vue-datocms/4.0.2:
+    resolution: {integrity: sha512-iDNYuEGLmJDAaU08RPOxtRlC1WSrMJNyL/6k7zGO6OKZ881RcDUzZtkXe85X40QNNXajMvAOuoPjalxqoL1Mvg==}
+    peerDependencies:
+      '@vue/composition-api': ^1.7.1
+      vue: '>= 2.5 < 2.7 || >=3.0.0'
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+    dependencies:
+      datocms-listen: 0.1.14
+      datocms-structured-text-generic-html-renderer: 2.0.4
+      datocms-structured-text-utils: 2.0.4
+      hyphenate-style-name: 1.0.4
+      vue-demi: 0.13.11
+    dev: false
+
+  /vue-demi/0.13.11:
+    resolution: {integrity: sha512-IR8HoEEGM65YY3ZJYAjMlKygDQn25D5ajNFNoKh9RSDMQtlzCxtfQjdQgv9jjK+m3377SsJXY8ysq8kLCZL25A==}
+    engines: {node: '>=12'}
+    hasBin: true
+    requiresBuild: true
+    peerDependencies:
+      '@vue/composition-api': ^1.0.0-rc.1
+      vue: ^3.0.0-0 || ^2.6.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+    dev: false
 
   /vue-devtools-stub/0.1.0:
     resolution: {integrity: sha512-RutnB7X8c5hjq39NceArgXg28WZtZpGc3+J16ljMiYnFhKvd8hITxSWQSQ5bvldxMDU6gG5mkxl1MTQLXckVSQ==}
