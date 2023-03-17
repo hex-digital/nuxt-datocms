@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "@nuxt/kit": "^3.3.1",
+    "datocms-listen": "^0.1.14",
     "vue-datocms": "^4.0.2"
   },
   "devDependencies": {

@@ -8,17 +8,6 @@ import type { Ref } from 'vue';
 import { useCookie } from '#app';
 import type { ConnectionStatus } from 'datocms-listen';
 
-interface QuerySubscription {
-  data: Ref;
-  status: Ref<ConnectionStatus>;
-  error: Ref<{
-    code: string;
-    message: string;
-    fatal: boolean;
-    response?: any;
-  } | null>;
-}
-
 export async function fetchPublished({
   endpoint,
   token,
@@ -87,7 +76,7 @@ export function subscribeToContentUpdates({
   initialData: any
   environment?: string
   includeDrafts?: boolean
-}): QuerySubscription {
+}) {
   return useQuerySubscription({
     query,
     variables,

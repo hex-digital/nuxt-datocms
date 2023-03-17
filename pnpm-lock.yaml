@@ -7,6 +7,7 @@ specifiers:
   '@nuxt/schema': ^3.3.1
   '@nuxt/test-utils': ^3.3.1
   changelogen: ^0.5.1
+  datocms-listen: ^0.1.14
   eslint: ^8.36.0
   nuxt: ^3.3.1
   vitest: ^0.29.3
@@ -14,6 +15,7 @@ specifiers:
 
 dependencies:
   '@nuxt/kit': 3.3.1
+  datocms-listen: 0.1.14
   vue-datocms: 4.0.2
 
 devDependencies:
