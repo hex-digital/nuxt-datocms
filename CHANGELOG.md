@@ -1,6 +1,24 @@
 # Changelog
 
 
+## v1.0.1
+
+[compare changes](https://undefined/undefined/compare/v1.0.0...v1.0.1)
+
+
+### 🩹 Fixes
+
+  - Fix import issues with typescript (a498e84)
+
+### 🏡 Chore
+
+  - Update package manager references (e1b93e5)
+
+### ❤️  Contributors
+
+- Jamie Warburton ([@Jamiewarb](http://github.com/Jamiewarb))
+- Ben Sherred <ben@sherred.co.uk>
+
 ## v1.0.0
 
 [compare changes](https://github.com/hex-digital/nuxt-datocms/compare/v0.0.1...v1.0.0)
