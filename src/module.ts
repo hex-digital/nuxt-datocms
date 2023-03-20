@@ -10,6 +10,8 @@ import {
 } from '@nuxt/kit';
 import { defu } from 'defu';
 
+export * from './runtime/types';
+
 // Module options TypeScript interface definition
 export interface ModuleOptions {
   environment?: string
