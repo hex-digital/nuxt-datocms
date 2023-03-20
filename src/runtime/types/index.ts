@@ -1,3 +1,9 @@
+export interface UseDatoCmsParams {
+  query: any
+  variables?: Record<string, any>
+  subscribe?: boolean | 'preview'
+}
+
 export interface DatoCmsState {
   preview: boolean
   token: string

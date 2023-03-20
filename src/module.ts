@@ -20,6 +20,8 @@ export interface ModuleOptions {
   privatePreviewModeEncryptionSecret?: string
   disablePreviewPassword?: boolean
   registerApiHandlers?: boolean
+  devtools?: boolean
+  datoAdminUrl?: string
 }
 
 export default defineNuxtModule<ModuleOptions>({
@@ -29,10 +31,16 @@ export default defineNuxtModule<ModuleOptions>({
   },
   // Default configuration options of the Nuxt module
   defaults: {
+    environment: undefined,
     endpoint: 'https://graphql.datocms.com',
     publicReadOnlyToken: null,
+    privateDraftEnabledToken: undefined,
+    privatePreviewModePassword: undefined,
+    privatePreviewModeEncryptionSecret: undefined,
     disablePreviewPassword: false,
     registerApiHandlers: true,
+    devtools: false,
+    datoAdminUrl: undefined,
   },
   setup(options, nuxt) {
     const logger = useLogger('nuxt-datocms');
@@ -42,6 +50,8 @@ export default defineNuxtModule<ModuleOptions>({
     }
 
     const { resolve } = createResolver(import.meta.url);
+
+    nuxt.options.build.transpile.push(resolve('./runtime'));
 
     // Do not add the extension since the `.ts` will be transpiled to `.mjs` after `npm run prepack`
     addPlugin(resolve('./runtime/plugin'));
@@ -90,18 +100,37 @@ export default defineNuxtModule<ModuleOptions>({
     }
     addImportsDir(resolve('./runtime/composables'));
 
+    logger.success('Module loaded successfully');
+
     if (options.registerApiHandlers) {
       addServerHandler({
         route: '/api/disable-preview',
-        handler: resolve('./runtime/server/api/disable-preview.ts'),
+        handler: resolve('./runtime/server/api/disable-preview'),
       });
       addServerHandler({
         route: '/api/enable-preview',
-        handler: resolve('./runtime/server/api/enable-preview.ts'),
+        handler: resolve('./runtime/server/api/enable-preview'),
       });
       addServerHandler({
         route: '/api/preview',
-        handler: resolve('./runtime/server/api/preview.ts'),
+        handler: resolve('./runtime/server/api/preview'),
+      });
+    }
+
+    if (options.devtools && options.datoAdminUrl) {
+      // Replace with `addCustomTab` from @nuxt/devtools-kit, once it can be installed from npm (package currently not resolving)
+      // See following for how to replace: https://devtools.nuxtjs.org/module/utils-kit
+      // @ts-expect-error - private API
+      nuxt.hook('devtools:customTabs', (iframeTabs) => {
+        iframeTabs.push({
+          name: 'datocms',
+          title: 'DatoCMS',
+          icon: 'i-logos-datocms',
+          view: {
+            type: 'iframe',
+            src: options.datoAdminUrl,
+          },
+        });
       });
     }
   },
