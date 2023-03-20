@@ -1,6 +1,23 @@
 # Changelog
 
 
+## v1.1.0
+
+[compare changes](https://github.com/hex-digital/nuxt-datocms/compare/v1.0.2...v1.1.0)
+
+
+### 🚀 Enhancements
+
+  - Export extra dato types ([725803f](https://github.com/hex-digital/nuxt-datocms/commit/725803f))
+
+### 🩹 Fixes
+
+  - Use debug over info for extra logger ([9001b4c](https://github.com/hex-digital/nuxt-datocms/commit/9001b4c))
+
+### ❤️  Contributors
+
+- Jamie Warburton ([@Jamiewarb](http://github.com/Jamiewarb))
+
 ## v1.0.2
 
 [compare changes](https://github.com/hex-digital/nuxt-datocms/compare/v1.0.1...v1.0.2)
