@@ -6,7 +6,7 @@
   "author": "Jamie Warburton @Jamiewarb",
   "license": "MIT",
   "homepage": "https://github.com/hex-digital/nuxt-datocms",
-  "repository": "@hexdigital/nuxt-datocms",
+  "repository": "hex-digital/nuxt-datocms",
   "bugs": "https://github.com/hex-digital/nuxt-datocms/issues",
   "keywords": [
     "nuxt",
