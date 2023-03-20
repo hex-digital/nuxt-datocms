@@ -41,7 +41,7 @@ export async function useDatoQuery({ query, variables = {}, subscribe = true }: 
           $datoCms.logger.info(`Running async query: ${uniqueKey}`);
           const { data } = await fetchPublished(fetchOptions);
           $datoCms.logger.trace(JSON.stringify(data.value, null, 2));
-          $datoCms.logger.info(`Async query complete: ${uniqueKey}`);
+          $datoCms.logger.debug(`Async query complete: ${uniqueKey}`);
           return data.value;
         } catch (err) {
           $datoCms.logger.error(uniqueKey, err);
