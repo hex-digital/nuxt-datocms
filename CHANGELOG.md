@@ -1,6 +1,20 @@
 # Changelog
 
 
+## v1.0.2
+
+[compare changes](https://github.com/hex-digital/nuxt-datocms/compare/v1.0.1...v1.0.2)
+
+
+### 🩹 Fixes
+
+  - Fix repo name in package.json ([62d4d16](https://github.com/hex-digital/nuxt-datocms/commit/62d4d16))
+  - Fix repo URL in changelog ([db47b4e](https://github.com/hex-digital/nuxt-datocms/commit/db47b4e))
+
+### ❤️  Contributors
+
+- Jamie Warburton ([@Jamiewarb](http://github.com/Jamiewarb))
+
 ## v1.0.1
 
 [compare changes](https://github.com/hex-digital/nuxt-datocms/compare/v1.0.0...v1.0.1)
