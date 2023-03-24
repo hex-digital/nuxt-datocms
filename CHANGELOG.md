@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v1.1.1
+
+[compare changes](https://github.com/hex-digital/nuxt-datocms/compare/v1.1.0...v1.1.1)
+
+
+### 🩹 Fixes
+
+  - Fix auto-import of components from vue-datocms ([42a538f](https://github.com/hex-digital/nuxt-datocms/commit/42a538f))
+
+### ❤️  Contributors
+
+- Jamie Warburton ([@Jamiewarb](http://github.com/Jamiewarb))
+
 ## v1.1.0
 
 [compare changes](https://github.com/hex-digital/nuxt-datocms/compare/v1.0.2...v1.1.0)
