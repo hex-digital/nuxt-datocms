@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v1.1.2
+
+[compare changes](https://github.com/hex-digital/nuxt-datocms/compare/v1.1.1...v1.1.2)
+
+
+### 🩹 Fixes
+
+  - Append datocms to start of component names, as per docs ([c7adc01](https://github.com/hex-digital/nuxt-datocms/commit/c7adc01))
+
+### ❤️  Contributors
+
+- Jamie Warburton ([@Jamiewarb](http://github.com/Jamiewarb))
+
 ## v1.1.1
 
 [compare changes](https://github.com/hex-digital/nuxt-datocms/compare/v1.1.0...v1.1.1)
