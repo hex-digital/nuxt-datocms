@@ -87,12 +87,14 @@ export default defineNuxtModule<ModuleOptions>({
       components: [
         {
           name: 'Image',
-          export: 'DatocmsImage',
+          kebabName: 'datocms-image',
+          pascalName: 'DatocmsImage',
           filePath: 'vue-datocms',
         },
         {
           name: 'StructuredText',
-          export: 'DatocmsStructuredText',
+          kebabName: 'datocms-structured-text',
+          pascalName: 'DatocmsStructuredText',
           filePath: 'vue-datocms',
         },
       ],
