@@ -86,15 +86,13 @@ export default defineNuxtModule<ModuleOptions>({
     const autoImports = {
       components: [
         {
-          name: 'Image',
-          kebabName: 'datocms-image',
-          pascalName: 'DatocmsImage',
+          name: 'DatocmsImage',
+          export: 'Image',
           filePath: 'vue-datocms',
         },
         {
-          name: 'StructuredText',
-          kebabName: 'datocms-structured-text',
-          pascalName: 'DatocmsStructuredText',
+          name: 'DatocmsStructuredText',
+          export: 'StructuredText',
           filePath: 'vue-datocms',
         },
       ],
