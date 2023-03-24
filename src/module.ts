@@ -44,7 +44,7 @@ export default defineNuxtModule<ModuleOptions>({
     devtools: false,
     datoAdminUrl: undefined,
   },
-  setup(options, nuxt) {
+  async setup(options, nuxt) {
     const logger = useLogger('nuxt-datocms');
 
     if (!options.publicReadOnlyToken) {
@@ -85,8 +85,16 @@ export default defineNuxtModule<ModuleOptions>({
 
     const autoImports = {
       components: [
-        'DatocmsImage',
-        'DatocmsStructuredText',
+        {
+          name: 'Image',
+          export: 'DatocmsImage',
+          filePath: 'vue-datocms',
+        },
+        {
+          name: 'StructuredText',
+          export: 'DatocmsStructuredText',
+          filePath: 'vue-datocms',
+        },
       ],
       composables: [
         'useSiteSearch',
@@ -94,15 +102,13 @@ export default defineNuxtModule<ModuleOptions>({
         'toHead',
       ],
     };
-    for (const autoImportComponent of autoImports.components) {
-      addComponent({ name: autoImportComponent, export: autoImportComponent, filePath: 'vue-datocms' });
+    for (const autoImportComponentObject of autoImports.components) {
+      await addComponent(autoImportComponentObject);
     }
     for (const autoImportComposable of autoImports.composables) {
       addImports({ name: autoImportComposable, as: autoImportComposable, from: 'vue-datocms' });
     }
     addImportsDir(resolve('./runtime/composables'));
-
-    logger.success('Module loaded successfully');
 
     if (options.registerApiHandlers) {
       addServerHandler({
