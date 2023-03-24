@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v1.1.3
+
+[compare changes](https://github.com/hex-digital/nuxt-datocms/compare/v1.1.2...v1.1.3)
+
+
+### 🩹 Fixes
+
+  - Correctly append datocms to start of auto-imported components ([3e2f4ca](https://github.com/hex-digital/nuxt-datocms/commit/3e2f4ca))
+
+### ❤️  Contributors
+
+- Jamie Warburton ([@Jamiewarb](http://github.com/Jamiewarb))
+
 ## v1.1.2
 
 [compare changes](https://github.com/hex-digital/nuxt-datocms/compare/v1.1.1...v1.1.2)
