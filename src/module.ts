@@ -54,6 +54,8 @@ export default defineNuxtModule<ModuleOptions>({
     const { resolve } = createResolver(import.meta.url);
 
     nuxt.options.build.transpile.push(resolve('./runtime'));
+    nuxt.options.build.transpile.push('vue-datocms');
+    nuxt.options.build.transpile.push('datocms-listen');
 
     // Do not add the extension since the `.ts` will be transpiled to `.mjs` after `npm run prepack`
     addPlugin(resolve('./runtime/plugin'));
