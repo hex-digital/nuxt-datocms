@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v1.1.4
+
+[compare changes](https://github.com/hex-digital/nuxt-datocms/compare/v1.1.3...v1.1.4)
+
+
+### 🩹 Fixes
+
+  - Add transpilation for datocms dependencies ([c5401b8](https://github.com/hex-digital/nuxt-datocms/commit/c5401b8))
+
+### ❤️  Contributors
+
+- Jamie Warburton ([@Jamiewarb](http://github.com/Jamiewarb))
+
 ## v1.1.3
 
 [compare changes](https://github.com/hex-digital/nuxt-datocms/compare/v1.1.2...v1.1.3)
