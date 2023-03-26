@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v1.1.5
+
+[compare changes](https://github.com/hex-digital/nuxt-datocms/compare/v1.1.4...v1.1.5)
+
+
+### 🩹 Fixes
+
+  - Fix "undefined" query name ([e1dca34](https://github.com/hex-digital/nuxt-datocms/commit/e1dca34))
+
+### ❤️  Contributors
+
+- Jamie Warburton ([@Jamiewarb](http://github.com/Jamiewarb))
+
 ## v1.1.4
 
 [compare changes](https://github.com/hex-digital/nuxt-datocms/compare/v1.1.3...v1.1.4)
