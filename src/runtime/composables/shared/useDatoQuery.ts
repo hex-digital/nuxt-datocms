@@ -30,10 +30,11 @@ export async function useDatoQuery({ query, variables = {}, subscribe = true }: 
     preview,
   };
 
+  if (!uniqueKey) {
+    uniqueKey = `${JSON.stringify(query).split('{')[0]}${JSON.stringify(variables)}`;
+  }
+
   if (asyncData) {
-    if (!uniqueKey) {
-      uniqueKey = `${JSON.stringify(query).split('{')[0]}${JSON.stringify(variables)}`;
-    }
     response = await useAsyncData(
       uniqueKey,
       async () => {
