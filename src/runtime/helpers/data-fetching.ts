@@ -131,11 +131,11 @@ function isPreviewEnabled(_runtimeConfig: RuntimeConfig): boolean {
  * retrieve it from a serverless function, where we can access the private token from env.
  */
 export async function draftEnabledToken(runtimeConfig: RuntimeConfig) {
-  if (process.server) {
+  if (import.meta.server) {
     return runtimeConfig.datocms.privateDraftEnabledToken;
   }
 
-  if (process.client) {
+  if (import.meta.client) {
     const preview = await $fetch<Preview>('/api/preview');
 
     if (isEnabledPreview(preview)) {
