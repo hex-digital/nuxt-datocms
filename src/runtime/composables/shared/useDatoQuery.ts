@@ -61,7 +61,7 @@ export async function useDatoQuery({ query, variables = {}, subscribe = true }: 
     $datoCms.logger.success(`Query complete: ${uniqueKey}`);
   }
 
-  if (process.client) {
+  if (import.meta.client) {
     if (subscribe === true || (subscribe === 'preview' && preview)) {
       return subscribeToContentUpdates({
         environment,
