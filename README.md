@@ -32,8 +32,6 @@ _Note: This module is for Nuxt 3. We do not provide a Nuxt 2 version._
 
 ```bash
 npx nuxi@latest module add datocms
-# npx nuxi@latest module add datocms
-# npx nuxi@latest module add datocms
 ```
 
 2. Add `@hexdigital/nuxt-datocms` to the `modules` section of `nuxt.config.ts`
