@@ -3134,11 +3134,6 @@ packages:
   fs.realpath@1.0.0:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
 
-  fsevents@2.3.2:
-    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
-    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
-    os: [darwin]
-
   fsevents@2.3.3:
     resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
@@ -4681,13 +4676,8 @@ packages:
       rollup:
         optional: true
 
-  rollup@3.19.1:
-    resolution: {integrity: sha512-lAbrdN7neYCg/8WaoWn/ckzCtz+jr70GFfYdlf50OF7387HTg+wiuiqJRFYawwSPpqfqDNYqK7smY/ks2iAudg==}
-    engines: {node: '>=14.18.0', npm: '>=8.0.0'}
-    hasBin: true
-
-  rollup@3.29.4:
-    resolution: {integrity: sha512-oWzmBZwvYrU0iJHtDmhsm662rC15FRXmcjCk1xD771dFDx5jJ02ufAQQTn0etB2emNk4J9EZg/yWKpsn9BWGRw==}
+  rollup@3.29.5:
+    resolution: {integrity: sha512-GVsDdsbJzzy4S/v3dqWPJ7EfvZJfCHiDqe80IyrF59LYuP+e6U1LJoUqeuqRbwAWoMNoXivMNeNAOf5E22VA1w==}
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
 
@@ -7047,7 +7037,7 @@ snapshots:
   '@parcel/watcher-wasm@2.4.1':
     dependencies:
       is-glob: 4.0.3
-      micromatch: 4.0.5
+      micromatch: 4.0.8
 
   '@parcel/watcher-win32-arm64@2.4.1':
     optional: true
@@ -7062,7 +7052,7 @@ snapshots:
     dependencies:
       detect-libc: 1.0.3
       is-glob: 4.0.3
-      micromatch: 4.0.5
+      micromatch: 4.0.8
       node-addon-api: 7.1.1
     optionalDependencies:
       '@parcel/watcher-android-arm64': 2.4.1
@@ -7085,11 +7075,11 @@ snapshots:
 
   '@polka/url@1.0.0-next.28': {}
 
-  '@rollup/plugin-alias@5.1.0(rollup@3.29.4)':
+  '@rollup/plugin-alias@5.1.0(rollup@3.29.5)':
     dependencies:
       slash: 4.0.0
     optionalDependencies:
-      rollup: 3.29.4
+      rollup: 3.29.5
 
   '@rollup/plugin-alias@5.1.0(rollup@4.24.0)':
     dependencies:
@@ -7097,16 +7087,16 @@ snapshots:
     optionalDependencies:
       rollup: 4.24.0
 
-  '@rollup/plugin-commonjs@25.0.8(rollup@3.29.4)':
+  '@rollup/plugin-commonjs@25.0.8(rollup@3.29.5)':
     dependencies:
-      '@rollup/pluginutils': 5.1.0(rollup@3.29.4)
+      '@rollup/pluginutils': 5.1.0(rollup@3.29.5)
       commondir: 1.0.1
       estree-walker: 2.0.2
       glob: 8.1.0
       is-reference: 1.2.1
       magic-string: 0.30.11
     optionalDependencies:
-      rollup: 3.29.4
+      rollup: 3.29.5
 
   '@rollup/plugin-commonjs@25.0.8(rollup@4.24.0)':
     dependencies:
@@ -7127,11 +7117,11 @@ snapshots:
     optionalDependencies:
       rollup: 4.24.0
 
-  '@rollup/plugin-json@6.0.0(rollup@3.29.4)':
+  '@rollup/plugin-json@6.0.0(rollup@3.29.5)':
     dependencies:
-      '@rollup/pluginutils': 5.1.0(rollup@3.29.4)
+      '@rollup/pluginutils': 5.1.0(rollup@3.29.5)
     optionalDependencies:
-      rollup: 3.29.4
+      rollup: 3.29.5
 
   '@rollup/plugin-json@6.1.0(rollup@4.24.0)':
     dependencies:
@@ -7139,16 +7129,16 @@ snapshots:
     optionalDependencies:
       rollup: 4.24.0
 
-  '@rollup/plugin-node-resolve@15.2.3(rollup@3.29.4)':
+  '@rollup/plugin-node-resolve@15.2.3(rollup@3.29.5)':
     dependencies:
-      '@rollup/pluginutils': 5.1.0(rollup@3.29.4)
+      '@rollup/pluginutils': 5.1.0(rollup@3.29.5)
       '@types/resolve': 1.20.2
       deepmerge: 4.3.1
       is-builtin-module: 3.2.1
       is-module: 1.0.0
       resolve: 1.22.8
     optionalDependencies:
-      rollup: 3.29.4
+      rollup: 3.29.5
 
   '@rollup/plugin-node-resolve@15.2.3(rollup@4.24.0)':
     dependencies:
@@ -7161,12 +7151,12 @@ snapshots:
     optionalDependencies:
       rollup: 4.24.0
 
-  '@rollup/plugin-replace@5.0.2(rollup@3.29.4)':
+  '@rollup/plugin-replace@5.0.2(rollup@3.29.5)':
     dependencies:
-      '@rollup/pluginutils': 5.1.0(rollup@3.29.4)
+      '@rollup/pluginutils': 5.1.0(rollup@3.29.5)
       magic-string: 0.27.0
     optionalDependencies:
-      rollup: 3.29.4
+      rollup: 3.29.5
 
   '@rollup/plugin-replace@5.0.7(rollup@4.24.0)':
     dependencies:
@@ -7196,13 +7186,13 @@ snapshots:
     optionalDependencies:
       rollup: 4.24.0
 
-  '@rollup/pluginutils@5.1.0(rollup@3.29.4)':
+  '@rollup/pluginutils@5.1.0(rollup@3.29.5)':
     dependencies:
       '@types/estree': 1.0.0
       estree-walker: 2.0.2
       picomatch: 2.3.1
     optionalDependencies:
-      rollup: 3.29.4
+      rollup: 3.29.5
 
   '@rollup/pluginutils@5.1.0(rollup@4.24.0)':
     dependencies:
@@ -9234,9 +9224,6 @@ snapshots:
 
   fs.realpath@1.0.0: {}
 
-  fsevents@2.3.2:
-    optional: true
-
   fsevents@2.3.3:
     optional: true
 
@@ -11242,10 +11229,10 @@ snapshots:
     dependencies:
       glob: 7.2.3
 
-  rollup-plugin-dts@6.1.1(rollup@3.29.4)(typescript@4.9.5):
+  rollup-plugin-dts@6.1.1(rollup@3.29.5)(typescript@4.9.5):
     dependencies:
       magic-string: 0.30.11
-      rollup: 3.29.4
+      rollup: 3.29.5
       typescript: 4.9.5
     optionalDependencies:
       '@babel/code-frame': 7.24.7
@@ -11259,13 +11246,9 @@ snapshots:
     optionalDependencies:
       rollup: 4.24.0
 
-  rollup@3.19.1:
+  rollup@3.29.5:
     optionalDependencies:
       fsevents: 2.3.3
-
-  rollup@3.29.4:
-    optionalDependencies:
-      fsevents: 2.3.2
 
   rollup@4.24.0:
     dependencies:
@@ -11721,12 +11704,12 @@ snapshots:
 
   unbuild@2.0.0(typescript@4.9.5):
     dependencies:
-      '@rollup/plugin-alias': 5.1.0(rollup@3.29.4)
-      '@rollup/plugin-commonjs': 25.0.8(rollup@3.29.4)
-      '@rollup/plugin-json': 6.0.0(rollup@3.29.4)
-      '@rollup/plugin-node-resolve': 15.2.3(rollup@3.29.4)
-      '@rollup/plugin-replace': 5.0.2(rollup@3.29.4)
-      '@rollup/pluginutils': 5.1.0(rollup@3.29.4)
+      '@rollup/plugin-alias': 5.1.0(rollup@3.29.5)
+      '@rollup/plugin-commonjs': 25.0.8(rollup@3.29.5)
+      '@rollup/plugin-json': 6.0.0(rollup@3.29.5)
+      '@rollup/plugin-node-resolve': 15.2.3(rollup@3.29.5)
+      '@rollup/plugin-replace': 5.0.2(rollup@3.29.5)
+      '@rollup/pluginutils': 5.1.0(rollup@3.29.5)
       chalk: 5.3.0
       citty: 0.1.6
       consola: 3.2.3
@@ -11741,8 +11724,8 @@ snapshots:
       pathe: 1.1.2
       pkg-types: 1.2.0
       pretty-bytes: 6.1.1
-      rollup: 3.29.4
-      rollup-plugin-dts: 6.1.1(rollup@3.29.4)(typescript@4.9.5)
+      rollup: 3.29.5
+      rollup-plugin-dts: 6.1.1(rollup@3.29.5)(typescript@4.9.5)
       scule: 1.3.0
       untyped: 1.4.2
     optionalDependencies:
@@ -12064,10 +12047,10 @@ snapshots:
       esbuild: 0.17.12
       postcss: 8.4.21
       resolve: 1.22.2
-      rollup: 3.19.1
+      rollup: 3.29.5
     optionalDependencies:
       '@types/node': 18.15.3
-      fsevents: 2.3.2
+      fsevents: 2.3.3
       terser: 5.36.0
 
   vite@5.4.9(@types/node@18.15.3)(terser@5.36.0):
