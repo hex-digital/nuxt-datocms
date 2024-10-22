@@ -31,9 +31,7 @@ _Note: This module is for Nuxt 3. We do not provide a Nuxt 2 version._
 1. Add `@hexdigital/nuxt-datocms` dependency to your project
 
 ```bash
-pnpm add -D @hexdigital/nuxt-datocms
-# yarn add --dev @hexdigital/nuxt-datocms
-# npm install --save-dev @hexdigital/nuxt-datocms
+npx nuxi@latest module add datocms
 ```
 
 2. Add `@hexdigital/nuxt-datocms` to the `modules` section of `nuxt.config.ts`
